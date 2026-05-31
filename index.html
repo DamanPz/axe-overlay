@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AXE ESPORT Bottom Overlay</title>
+<title>AXE ESPORT Bottom Overlay - Large</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: transparent; overflow: hidden; width: 1920px; height: 70px; }
+  /* Changed height from 70px to 140px */
+  body { background: transparent; overflow: hidden; width: 1920px; height: 140px; }
 
   @keyframes pulse-border {
     0%, 100% { opacity: 0.6; }
@@ -29,17 +30,19 @@
     50% { box-shadow: 0 0 18px #ff0000bb, 0 0 36px #cc000077; }
   }
 
+  /* Changed height from 70px to 140px */
   .wrapper {
     background: #000000;
     width: 1920px;
-    height: 70px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
 
+  /* Made border lines slightly thicker for the larger scale */
   .top-line {
-    height: 2px;
+    height: 4px;
     background: linear-gradient(90deg, #220000, #cc0000, #ff4444, #ff0000, #cc0000, #220000);
     animation: pulse-border 2s ease-in-out infinite;
     flex-shrink: 0;
@@ -53,20 +56,21 @@
 
   .brand-section {
     background: #0d0000;
-    border-right: 1px solid #330000;
+    border-right: 2px solid #330000;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    gap: 12px;
-    min-width: 220px;
+    padding: 0 30px;
+    gap: 16px;
+    min-width: 320px;
     flex-shrink: 0;
   }
 
+  /* Increased font size from 17px to 26px */
   .brand-name {
     font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 17px;
+    font-size: 26px;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     background: linear-gradient(90deg, #ff4444 0%, #ffffff 35%, #ff4444 55%, #cc0000 100%);
     background-size: 600px 100%;
     -webkit-background-clip: text;
@@ -75,38 +79,41 @@
     animation: shimmer 3s linear infinite;
   }
 
+  /* Increased sub-text size from 9px to 13px */
   .brand-sub {
     font-family: Arial, sans-serif;
-    font-size: 9px;
-    color: #555;
-    letter-spacing: 2px;
-    margin-top: 2px;
+    font-size: 13px;
+    color: #666;
+    letter-spacing: 3px;
+    margin-top: 4px;
   }
 
   .live-section {
     background: #080000;
-    border-right: 1px solid #220000;
+    border-right: 2px solid #220000;
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    gap: 7px;
+    padding: 0 24px;
+    gap: 10px;
     flex-shrink: 0;
   }
 
+  /* Scaled up the live dot indicator */
   .live-dot {
-    width: 9px;
-    height: 9px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: #ff2222;
     animation: blink-live 1.2s ease-in-out infinite;
   }
 
+  /* Increased text from 11px to 18px */
   .live-text {
     color: #ff2222;
     font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
 
   .ticker-section {
@@ -115,7 +122,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    border-right: 1px solid #1a0000;
+    border-right: 2px solid #1a0000;
   }
 
   .ticker-track {
@@ -125,11 +132,12 @@
     width: max-content;
   }
 
+  /* Increased text from 12px to 20px */
   .ticker-content {
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 20px;
     color: #888;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     padding: 0 60px;
   }
 
@@ -138,44 +146,47 @@
 
   .gpay-section {
     background: #0a0000;
-    border-left: 1px solid #330000;
+    border-left: 2px solid #330000;
     display: flex;
     align-items: center;
-    padding: 0 22px;
+    padding: 0 35px;
     gap: 12px;
     flex-shrink: 0;
     animation: glow-pulse 2.5s ease-in-out infinite;
   }
 
+  /* Scaled up GPay Badge */
   .gpay-badge {
     background: #1a6b3a;
-    border-radius: 4px;
-    padding: 2px 9px;
+    border-radius: 6px;
+    padding: 4px 14px;
     display: inline-block;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
   }
 
-  .gpay-badge span.g { color: #fff; font-size: 11px; font-weight: 900; font-family: 'Arial Black', Arial, sans-serif; }
-  .gpay-badge span.pay { color: #4ade80; font-size: 11px; font-weight: 900; font-family: 'Arial Black', Arial, sans-serif; }
+  .gpay-badge span.g { color: #fff; font-size: 16px; font-weight: 900; font-family: 'Arial Black', Arial, sans-serif; }
+  .gpay-badge span.pay { color: #4ade80; font-size: 16px; font-weight: 900; font-family: 'Arial Black', Arial, sans-serif; }
 
+  /* Increased number size from 15px to 22px */
   .gpay-number {
     color: #ff4444;
     font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 900;
     letter-spacing: 1px;
   }
 
+  /* Increased label size from 8px to 11px */
   .gpay-label {
-    color: #444;
+    color: #555;
     font-family: Arial, sans-serif;
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 2px;
-    margin-top: 2px;
+    margin-top: 4px;
   }
 
   .bottom-line {
-    height: 2px;
+    height: 4px;
     background: linear-gradient(90deg, #000, #330000, #880000, #cc0000, #880000, #330000, #000);
     flex-shrink: 0;
   }
@@ -187,7 +198,8 @@
   <div class="main-row">
 
     <div class="brand-section">
-      <svg width="38" height="38" viewBox="0 0 36 36">
+      <!-- Scaled logo up from 38x38 to 65x65 -->
+      <svg width="65" height="65" viewBox="0 0 36 36">
         <polygon points="18,4 22,14 32,14 24,21 27,31 18,25 9,31 12,21 4,14 14,14" fill="#880000" stroke="#cc0000" stroke-width="1"/>
         <line x1="14" y1="18" x2="22" y2="18" stroke="#ff4444" stroke-width="2.5" stroke-linecap="round"/>
         <line x1="18" y1="14" x2="18" y2="22" stroke="#ff4444" stroke-width="2.5" stroke-linecap="round"/>
